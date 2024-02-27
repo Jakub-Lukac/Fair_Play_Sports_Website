@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@500&family=Inconsolata&display=swap');
+
+:root{
+    --ternaryFont: 'Fira Sans', sans-serif;
+    --secondaryFont: 'Inconsolata', monospace;
+    --primaryFont: 'Bebas Neue', sans-serif;
+    --primaryColor: #f5eded;
+    --newsCardColor: #eddede;
+    --secondaryColor: #d72323;
+    --ternaryColor: #3e3636;
+    --blackColor: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: var(--primaryColor); /* because of stupid footer*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* HEADER CSS */
+
+.hero-image{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url("../images/hero_image.jpg");
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%; /* no 100vw, because than we will have horizontall scroll bar, which is smth we do not want*/
+    background: linear-gradient(180deg, rgba(0,0,0,.95), rgba(0,0,0,.15));
+    color: white;
+}
+
+.menu-item{
+    font-family: var(--primaryFont);
+    font-size: 1.8em;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    list-style: none;
+
+}
+
+.menu-item-text{
+    text-decoration: none;
+    color: var(--primaryColor);
+    transition: 500ms;
+}
+
+.menu-item-text:hover{
+    cursor: pointer;
+    color: var(--secondaryColor);
+}
+
+.navbar{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-top: 20px;
+}
+
+.left, .right{
+    display: flex;
+    gap: 4em;
+    padding-left: 0px;
+}
+
+.right{
+    display: flex;
+    gap: 8em;
+    padding-left: 0px;
+}
+
+
+.logoImage{
+    width: 11%;
+    height: 190px;
+}
+
+.logo{
+    margin-top: -75px;
+    text-align: center;
+}
+
+.hero-content{
+    display: block;
+    position: absolute;
+    top: 75%; 
+    left: 25%; 
+    transform: translate(-50%, -50%);
+}
+
+.hero-text{
+    font-family: var(--primaryFont);
+    font-weight: 800;
+    font-size: 4em;
+    margin: 0;
+}
+
+.hero-button{
+    display: inline-block; 
+    padding: 20px;
+    border-radius: 4px;
+    background-color: var(--secondaryColor);
+}
+
+.hero-button a{
+    text-decoration: none;
+    color: var(--primaryColor);
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+/* MAIN CSS */
+
+.banner{
+    position: absolute;
+    top: 100%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 4%;
+    background: linear-gradient(90deg, rgba(215,35,35,1) 0%, rgba(62,54,54,1) 100%);
+}
+
+/* NEWS SECTION */
+
+.news-section{
+    background: radial-gradient(circle, rgba(245,237,237,1) 0%, rgba(215,35,35,1) 100%);
+    padding-bottom: 40px;
+}
+
+.section-heading {
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding: 30px 0px 0px 0px;
+    text-align: center;
+    color: var(--primaryColor);
+    font-family: var(--primaryFont);
+    font-size: 5em;
+}
+
+.news-card-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.news-card{
+    background-color: var(--newsCardColor);
+    width: 325px;
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,.2);
+}
+
+.news-card-image-container {
+    height: 320px; /* Adjust this value to your desired fixed height */
+    overflow: hidden;
+}
+
+.news-card-image{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.news-card-content{
+    padding: 0px 16px 12px 16px;
+}
+
+.news-card-heading{
+    margin: 15px 0px;
+    font-size: 1.8em;
+}
+
+.news-card-text{
+    font-size: 1em;
+}
+
+.news-card-btn{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    letter-spacing: 0.6px;
+}
+
+/* APPLICATION SECTION*/
+
+.applications-section{
+    background: radial-gradient(circle, rgba(237,222,222,1) 0%, rgba(62,54,54,1) 100%);
+    padding-bottom: 40px;
+}
+
+.application-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 3em;
+}
+
+.custom-margin-bottom{
+    margin-bottom: 30px;
+}
+
+.application-card{
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 80%;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    border-radius: 8px;
+    filter: grayscale(100%);
+    transition: 800ms;
+    text-align: center;
+    padding: 25px 25px 35px 25px;
+}
+
+.application-card:hover{
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+
+.application-text {
+    color: var(--primaryColor);
+    font-family: var(--primaryFont);
+    font-size: 3em;
+    letter-spacing: 4px;
+    margin: 0px;
+    height: 100%;
+}
+
+/*  FOOTER  */
+
+.sponsors-section{
+    background: radial-gradient(circle, rgba(245,237,237,1) 0%, rgba(237,222,222,1) 100%);
+    padding-bottom: 40px;
+}
+
+.sponsors-card-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 80px;
+}
+
+.sponsors-image{
+    max-width: 200px;
+}
+
+.sponsors-heading-color{
+    color: var(--ternaryColor);
+}
+
+footer{
+    text-align: center;
+    color: var(--ternaryColor);
+    font-family: var(--primaryFont);
+    font-weight: 800;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    background-color: var(--primaryColor);
+}
