@@ -56,6 +56,15 @@ html {
 
 }
 
+#menu-icon {
+    float: right;
+    margin-right: 45px;
+    margin-top: -57px;
+    font-size: 42px;
+    display: none;
+    z-index: 3;
+}
+
 .menu-item-text{
     text-decoration: none;
     color: var(--primaryColor);
@@ -89,8 +98,8 @@ html {
 
 
 .logoImage{
-    width: 11%;
-    height: 190px;
+    max-width: 200px;
+    max-height: 190px;
 }
 
 .logo{
@@ -103,7 +112,7 @@ html {
     position: absolute;
     top: 75%; 
     left: 25%; 
-    transform: translate(-50%, -50%);
+    transform: translate(-25%, -75%);
 }
 
 .hero-text{
@@ -136,7 +145,7 @@ html {
     transform: translate(-50%, -50%);
     width: 50%;
     height: 4%;
-    background: linear-gradient(90deg, rgba(215,35,35,1) 0%, rgba(62,54,54,1) 100%);
+    background: linear-gradient(90deg, rgba(245,237,237,1) 0%, rgba(215,35,35,1) 50%, rgba(62,54,54,1) 100%);
 }
 
 /* NEWS SECTION */
@@ -148,7 +157,6 @@ html {
 
 .section-heading {
     display: block;
-    width: 50%;
     margin: auto;
     padding: 30px 0px 0px 0px;
     text-align: center;
@@ -284,3 +292,209 @@ footer{
     letter-spacing: 2px;
     background-color: var(--primaryColor);
 }
+
+
+
+
+/* MEDIA QUERY BREAKPOINTS*/
+
+@media (max-width: 1500px){
+    .left{
+        gap: 2em;
+    }
+
+    .right{
+        gap: 4em;
+    }
+
+    .menu-item{
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 1250px){
+    .left{
+        gap: 1.5em;
+    }
+
+    .right{
+        gap: 3.5em;
+    }
+
+    .menu-item{
+        font-size: 1.2em;
+    }
+
+    .logoImage{
+        margin-top: 10px;
+    }
+}
+/* Here include burger menu */
+@media (max-width: 1050px){
+    .banner{
+        transform: translate(-50%, 0%);
+    }
+    
+    .logoImage{
+        margin-top: 100px;
+    }
+
+    #menu-icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        font-size: 42px;
+        margin-top: 10px;
+        z-index: 4;
+    }
+
+    .navbar{
+        position: absolute;
+        width: 50%;
+        height: 100vh;
+        padding: 50px 30px;
+        top: 0;
+        right: 100%;
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(32px);
+        transition: 1000ms;
+        z-index: 2;
+    }
+    .navbar.open{
+        right: 0;
+    }
+    .left, .right{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin: 0px;
+    }
+
+    .menu-item{
+        text-align: center;
+        display: block;
+        padding: 0px;
+        margin: 0px 0px 24px 0px;
+        font-size: 1.8em;
+    }
+
+    
+}
+
+@media (max-width: 992px){
+
+    .navbar{
+        height: 80vh;
+    }
+    .hero-image{
+        height: 80vh;
+    }
+    .logoImage{
+        max-width: 180px;
+        max-height: 160px;
+    }
+
+    .hero-text{
+        font-size: 3em;
+    }
+
+    .hero-button{
+        padding: 15px;
+    }
+
+    .hero-button a{
+        font-size: 1.2em;
+    }
+
+    .banner{
+        top: 80%;
+    }
+}
+
+@media (max-width: 768px){
+    #menu-icon {
+        font-size: 32px;
+    }
+
+    .logoImage{
+        max-width: 170px;
+        max-height: 150px;
+    }
+
+    .hero-text{
+        font-size: 2.5em;
+    }
+
+    .hero-button{
+        padding: 14px;
+    }
+
+    .hero-button a{
+        font-size: 1.1em;
+    }
+
+    .section-heading{
+        font-size: 4em;
+    }
+
+    .application-text{
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 630px){
+    .application-text{
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 580px){
+    #menu-icon {
+        margin-right: 20px;
+    }
+    .banner{
+        transform: translate(-50%, 0%);
+    }
+
+    .application-text{
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 500px) {
+    #menu-icon {
+        font-size: 28px;
+    }
+
+    .menu-item{
+        font-size: 1.4em;
+    }
+
+    .logoImage{
+        max-width: 150px;
+        max-height: 130px;
+    }
+
+    .hero-text{
+        font-size: 2.2em;
+    }
+
+    .hero-button{
+        padding: 12px;
+    }
+
+    .hero-button a{
+        font-size: 1em;
+    }
+
+    .section-heading{
+        font-size: 3.5em;
+    }
+
+    .application-text{
+        font-size: 1em;
+    }
+}
+
