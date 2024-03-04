@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:wght@500&family=Inconsolata&display=swap');
+
+:root{
+    --ternaryFont: 'Fira Sans', sans-serif;
+    --secondaryFont: 'Inconsolata', monospace;
+    --primaryFont: 'Bebas Neue', sans-serif;
+    --primaryColor: #f5eded;
+    --newsCardColor: #eddede;
+    --secondaryColor: #d72323;
+    --ternaryColor: #3e3636;
+    --blackColor: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: var(--primaryColor); /* because of stupid footer*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-image{
+    height: 30vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url("../images/hero_image2.png");
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%; /* no 100vw, because than we will have horizontall scroll bar, which is smth we do not want*/
+    background: linear-gradient(180deg, rgba(0,0,0,.85), rgba(0,0,0,.15));
+    color: white;
+}
+
+.menu-item{
+    font-family: var(--primaryFont);
+    font-size: 1.8em;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    list-style: none;
+
+}
+
+#menu-icon {
+    float: right;
+    margin-right: 45px;
+    margin-top: -57px;
+    font-size: 42px;
+    display: none;
+    z-index: 3;
+}
+
+.menu-item-text{
+    text-decoration: none;
+    color: var(--primaryColor);
+    transition: 500ms;
+}
+
+.menu-item-text:hover{
+    cursor: pointer;
+    color: var(--secondaryColor);
+}
+
+.navbar{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-top: 20px;
+}
+
+.left, .right {
+    display: flex;
+    gap: 4em;
+    padding-left: 0px;
+}
+
+.right{
+    padding-left: 70px;
+}
+
+
+.logoImage{
+    max-width: 200px;
+    max-height: 190px;
+}
+
+.logo{
+    margin-top: -75px;
+    text-align: center;
+}
+
+.social-media-btns{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    position: absolute;
+    right: 50px;
+    bottom: 25px;
+}
+
+.social-media-btns a {
+    cursor: pointer;
+}
+
+.social-media-btns i {
+    font-size: 50px;
+    color: var(--primaryColor);
+    transition: 500ms;
+}
+
+.social-media-btns i:hover {
+     color: var(--secondaryColor)
+}
+
+/*  ABOUT US SECTION */
+
+.about-us-section{
+    background: radial-gradient(circle, rgba(245,237,237,1) 0%, rgba(237,222,222,1) 100%);
+    padding-bottom: 40px;
+}
+
+.section-heading {
+    display: block;
+    margin: auto;
+    padding: 30px 0px 0px 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--primaryColor);
+    font-family: var(--primaryFont);
+    font-size: 5em;
+}
+
+.about-us-text {
+    display: block;
+    width: 55%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    color: var(--ternaryColor);
+    font-family: var(--ternaryFont);
+    font-size: 1.2em;
+    word-spacing: 4px;
+}
+
+.dark-color-text{
+    color: var(--ternaryColor);
+}
+
+.support-us-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.support-us-links a img{
+    width: 300px;
+    height: auto;
+}
+
+
+
+/* SPONSORS SECTION */
+
+.sponsors-section{
+    background: radial-gradient(circle, rgba(245,237,237,1) 0%, rgba(237,222,222,1) 100%);
+    padding-bottom: 40px;
+}
+
+.sponsors-card-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 80px;
+}
+
+.sponsors-image{
+    max-width: 200px;
+}
+
+.sponsors-heading-color{
+    color: var(--ternaryColor);
+}
+
+/* VIDEOS SECTION */
+
+footer{
+    text-align: center;
+    color: var(--ternaryColor);
+    font-family: var(--primaryFont);
+    font-weight: 800;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    background-color: var(--primaryColor);
+}
+
+
+.videos-section {
+    background: radial-gradient(circle, rgba(245,237,237,1) 0%, rgba(215,35,35,1) 100%);
+}
+
+.video-cards-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-bottom: 40px;
+}
+
+.video-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.video-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-card::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    content: attr(data-content);
+    color: var(--ternaryColor);
+    font-family: var(--ternaryFont);
+    font-size: 2.5em;
+
+    text-align: center;
+    font-weight: 800;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(245, 237, 237, 1) 0%, rgba(237, 222, 222, 1) 100%);
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.video-card:hover::before {
+    opacity: 0;
+}
+
+.video-card h3 {
+    text-align: center;
+    color: var(--ternaryColor);
+    font-size: 2.5em;
+    font-family: var(--ternaryFont);
+}
+
+.video-card i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em; 
+    color: var(--primaryColor);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-card:hover i {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+/* MODAL VIDEO */
+
+section#modal{
+    position: fixed; /* nebude sa hybat ked scrollujem*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /*vyska priestoru v prehliadaci -- view port height*/
+    display: none; /* tymto zmizne vsetko co je v div a img ale je to akokeby stale tam*/
+}
+div#darkBg{
+    background-color: rgba(0, 0, 0, 0.6); /* posledne cislo znaci prehladnost farby*/
+    width: 100%;
+    height: 100%;
+}
+.modalVid{   
+    max-width: 85%;
+    max-height: 75%;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* MEDIA QUERY END POINTS */
+
+@media (max-width: 1500px){
+    .left{
+        gap: 2em;
+    }
+
+    .right{
+        gap: 4em;
+    }
+}
+
+@media (max-width: 1250px){
+    .left{
+        gap: 1.5em;
+    }
+
+    .right{
+        gap: 3.5em;
+    }
+
+    .logoImage{
+        margin-top: 10px;
+    }
+}
+/* Here include burger menu */
+@media (max-width: 1050px){
+    .right{
+        padding-left: 0px;
+    }
+    
+    .logoImage{
+        margin-top: 100px;
+    }
+
+    #menu-icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        font-size: 32px;
+        margin-top: 10px;
+        z-index: 4;
+    }
+
+    .navbar{
+        position: absolute;
+        width: 50%;
+        height: 30vh;
+        padding: 50px 30px;
+        top: 0;
+        right: 100%;
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(32px);
+        transition: 1000ms;
+        z-index: 2;
+    }
+    .navbar.open{
+        right: 0;
+    }
+    .left, .right{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin: 0px;
+    }
+
+    .menu-item{
+        text-align: center;
+        display: block;
+        padding: 0px;
+        margin: 0px 0px 18px 0px;
+        font-size: 1.4em;
+    }
+
+    
+}
+
+@media (max-width: 992px){
+    
+    .logoImage{
+        max-width: 180px;
+        max-height: 160px;
+    }
+
+    .social-media-btns i {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px){
+    #menu-icon {
+        font-size: 32px;
+    }
+
+    .logoImage{
+        max-width: 170px;
+        max-height: 150px;
+    }
+
+    .section-heading{
+        font-size: 4em;
+    }
+
+    .application-text{
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 630px){
+    .application-text{
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 580px){
+    #menu-icon {
+        margin-right: 20px;
+    }
+
+    .social-media-btns i {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    #menu-icon {
+        font-size: 28px;
+    }
+
+    .menu-item{
+        font-size: 1.4em;
+    }
+
+    .logoImage{
+        max-width: 150px;
+        max-height: 130px;
+    }
+
+    .section-heading{
+        font-size: 3.5em;
+    }
+
+    .video-card::before{
+        font-size: 2.2em;
+    }
+
+    .support-us-links a img{
+        width: 280px;
+        height: auto;
+    }
+}
+
+@media (max-width: 400px){
+    .about-us-text{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 350px){
+    footer {
+        font-size: 1.3em;
+    }
+}
+

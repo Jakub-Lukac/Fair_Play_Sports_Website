@@ -127,26 +127,47 @@ html {
     padding: 20px;
     border-radius: 4px;
     background-color: var(--secondaryColor);
+    transition: 500ms;
+}
+
+.hero-button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .hero-button a{
     text-decoration: none;
     color: var(--primaryColor);
+    font-family: var(--ternaryFont);
     font-weight: 800;
     font-size: 1.5em;
 }
 
+.social-media-btns{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    position: absolute;
+    right: 50px;
+    bottom: 25px;
+}
+
+.social-media-btns a {
+    cursor: pointer;
+}
+
+.social-media-btns i {
+    font-size: 50px;
+    color: var(--primaryColor);
+    transition: 500ms;
+}
+
+.social-media-btns i:hover {
+     color: var(--secondaryColor)
+}
+
 /* MAIN CSS */
 
-.banner{
-    position: absolute;
-    top: 100%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 4%;
-    background: linear-gradient(90deg, rgba(245,237,237,1) 0%, rgba(215,35,35,1) 50%, rgba(62,54,54,1) 100%);
-}
 
 /* NEWS SECTION */
 
@@ -197,7 +218,7 @@ html {
 
 .news-card-heading{
     margin: 15px 0px;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 .news-card-text{
@@ -213,6 +234,12 @@ html {
     text-decoration: none;
     border-radius: 4px;
     letter-spacing: 0.6px;
+    transition: 500ms;
+}
+
+.news-card-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /* APPLICATION SECTION*/
@@ -233,6 +260,7 @@ html {
 }
 
 .application-card{
+    text-decoration: none;
     display: block;
     margin: auto;
     width: 70%;
@@ -300,29 +328,22 @@ footer{
 
 @media (max-width: 1500px){
     .left{
-        gap: 2em;
+        gap: 4em;
+        padding-right: 90px;
     }
 
     .right{
         gap: 4em;
     }
-
-    .menu-item{
-        font-size: 1.5em;
-    }
 }
 
 @media (max-width: 1250px){
     .left{
-        gap: 1.5em;
+        gap: 3em;
     }
 
     .right{
         gap: 3.5em;
-    }
-
-    .menu-item{
-        font-size: 1.2em;
     }
 
     .logoImage{
@@ -331,6 +352,9 @@ footer{
 }
 /* Here include burger menu */
 @media (max-width: 1050px){
+    .left{
+        padding-right: 0px;
+    }
     .banner{
         transform: translate(-50%, 0%);
     }
@@ -411,6 +435,10 @@ footer{
     .banner{
         top: 80%;
     }
+
+    .social-media-btns i {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 768px){
@@ -461,6 +489,10 @@ footer{
     .application-text{
         font-size: 1.5em;
     }
+
+    .social-media-btns i {
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -495,6 +527,12 @@ footer{
 
     .application-text{
         font-size: 1em;
+    }
+}
+
+@media (max-width: 350px){
+    footer {
+        font-size: 1.3em;
     }
 }
 
