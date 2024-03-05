@@ -351,6 +351,11 @@ footer{
     text-transform: uppercase;
     margin: 5px 0px 0px 0px; 
 }
+.player-stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .player-stats-container p {
     color: var(--ternaryColor);
     font-family: var(--primaryFont);
@@ -469,6 +474,11 @@ div#darkBg{
 
     .social-media-btns i {
         font-size: 40px;
+    }
+
+
+    .player-stats-container p {
+        font-size: 2.5em;
     }
 }
 
