@@ -315,7 +315,7 @@ footer{
     grid-template-columns: 1fr 2fr 1.5fr;
     background-color: var(--playerCardColor);
     border-radius: 8px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .player-img {
@@ -362,6 +362,24 @@ footer{
     font-size: 3em;
 }
 
+.full-stats-link{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    font-family: var(--primaryFont);
+    color: var(--ternaryColor);
+    font-weight: 500;
+    margin: 50px auto 0px auto;
+    transition: 500ms;
+}
+
+.full-stats-link:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    color: var(--secondaryColor);
+}
+
 /* MODAL VIDEO */
 
 section#modal{
@@ -385,6 +403,55 @@ div#darkBg{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+/* TABLE */
+ 
+.players-stat-table{
+    background-color: var(--primaryColor);
+    border-radius: 8px;
+    box-shadow: 0 .4em .8em #0005;
+    overflow: auto;  /*not sure if needed*/
+    text-align: center;
+    max-width: 85%;
+    max-height: 95%;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+table, th, td {
+    padding: 1em;
+    border-collapse: collapse;
+}
+
+table::-webkit-scrollbar{
+    width: 0.5em;
+    height: 0.5em;
+
+}
+
+table::-webkit-scrollbar-thumb{
+    border-radius: 0.5em;
+    background-color: red;
+    visibility: hidden;
+}
+
+table:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+thead th {
+    position: static;
+    top: 0;
+    left: 0;
+    background-color: var(--newsCardColor);
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--playerCardColor);
+}
+
 
 /* MEDIA QUERY END POINTS */
 
@@ -499,6 +566,19 @@ div#darkBg{
     .application-text{
         font-size: 2.5em;
     }
+
+    .player-img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .first-name, .last-name {
+        font-size: 1.2em;
+    }
+
+    .player-stats-container p {
+        font-size: 1.7em;
+    }
 }
 
 @media (max-width: 630px){
@@ -514,6 +594,19 @@ div#darkBg{
 
     .social-media-btns i {
         font-size: 30px;
+    }
+
+    .player-img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .first-name, .last-name {
+        font-size: 1em;
+    }
+
+    .player-stats-container p {
+        font-size: 1.2em;
     }
 }
 
@@ -542,6 +635,38 @@ div#darkBg{
     .support-us-links a img{
         width: 280px;
         height: auto;
+    }
+}
+
+@media (max-width: 445px){
+
+    .player-card{
+        width: 300px;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .player-name-container{
+        padding-left: 0px;
+        align-items: center;
+    }
+
+    .player-img{
+        display: block;
+        margin: 0px auto;
+    }
+
+    .player-img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .first-name, .last-name {
+        font-size: 1.2em;
+    }
+
+    .player-stats-container p {
+        font-size: 1.7em;
     }
 }
 
