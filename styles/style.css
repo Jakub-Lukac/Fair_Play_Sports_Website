@@ -24,6 +24,16 @@ body{
     background-color: var(--primaryColor); /* because of stupid footer*/
 }
 
+body::-webkit-scrollbar{
+    width: 1em;
+    height: 1em;
+}
+
+body::-webkit-scrollbar-thumb{
+    border-radius: 8px;
+    background-color: #0004;
+}
+
 html {
     scroll-behavior: smooth;
 }

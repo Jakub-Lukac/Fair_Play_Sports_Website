@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     $("section#modal").css({ display: "block", opacity: 0 });
     $("video.modalVid").css({ display: "block", marginTop: "-50px" });
-    $("div.players-stat-table").css({ display: "none" });
+    $("div.wrapper").css({ display: "none" });
 
     $("section#modal").animate({ opacity: 1 }, 500);
     $("video.modalVid").animate({ marginTop: "0px" }, 500);
@@ -19,11 +19,11 @@ $(document).ready(function () {
     e.preventDefault(); // Prevent default link behavior
 
     $("section#modal").css({ display: "block", opacity: 0 });
-    $("div.players-stat-table").css({ display: "block", marginTop: "-50px" });
+    $("div.wrapper").css({ display: "block", marginTop: "-50px" });
     $("video.modalVid").css({ display: "none" });
 
     $("section#modal").animate({ opacity: 1 }, 500);
-    $("div.players-stat-table").animate({ marginTop: "0px" }, 500);
+    $("div.wrapper").animate({ marginTop: "0px" }, 500);
   });
 
   // Close modal window when click on black background
@@ -38,6 +38,6 @@ $(document).ready(function () {
       }
     );
     $("video#modalVid").animate({ marginTop: "+50px" }, 500);
-    $("div.players-stat-table").animate({ marginTop: "+50px" }, 500);
+    $("div.wrapper").animate({ marginTop: "+50px" }, 500);
   });
 });
