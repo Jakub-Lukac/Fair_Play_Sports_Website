@@ -102,7 +102,7 @@ html {
 
 .right{
     display: flex;
-    gap: 8em;
+    gap: 3em;
     padding-left: 0px;
 }
 
@@ -180,6 +180,12 @@ html {
 
 /* MAIN CSS */
 
+.must{
+    font-size: 0.01em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 
 /* NEWS SECTION */
 
@@ -202,11 +208,17 @@ html {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    /*gap: 50px;
+    padding: 0px 200px;*/
 }
 
 .news-card{
+    display: grid;
+    grid-template-rows: 1fr 0.5fr;
     background-color: var(--newsCardColor);
     width: 325px;
+    height: 100%;
+    max-height: 500px;
     margin: 20px;
     border-radius: 8px;
     overflow: hidden;
@@ -214,7 +226,6 @@ html {
 }
 
 .news-card-image-container {
-    height: 320px; /* Adjust this value to your desired fixed height */
     overflow: hidden;
 }
 
@@ -343,11 +354,12 @@ footer{
 @media (max-width: 1500px){
     .left{
         gap: 4em;
-        padding-right: 90px;
+        padding-right: 0px;
     }
 
     .right{
-        gap: 4em;
+        padding-left: 30px;
+        gap: 2em;
     }
 }
 
@@ -357,17 +369,28 @@ footer{
     }
 
     .right{
-        gap: 3.5em;
+        gap: 1.5em;
+        padding-left: 60px;
     }
 
     .logoImage{
         margin-top: 10px;
     }
 }
+
+@media (max-width: 1175px){
+    .menu-item {
+        font-size: 1.5em;
+    }
+}
 /* Here include burger menu */
 @media (max-width: 1050px){
     .left{
         padding-right: 0px;
+    }
+
+    .right{
+        padding: 0px;
     }
     .banner{
         transform: translate(-50%, 0%);
@@ -544,6 +567,7 @@ footer{
     }
 }
 
+
 @media (max-width: 350px){
     footer {
         font-size: 1.3em;
@@ -556,11 +580,29 @@ footer{
     .menu-item{
         font-size: 1.2em;
     }
+
+    .news-card-heading{
+        font-size: 1.3em;
+        margin-bottom: 0px;
+    }
+
+    .news-card-text{
+        margin-top: 5px;
+    }
 }
 
-@media (max-width: 250px){
+@media (max-width: 265px){
+    .social-media-btns{
+        gap: 30px;
+        right: 50vw;
+        transform: translateX(50%);
+    }
+
     .menu-item{
         font-size: 1em;
     }
 }
+
+
+
 

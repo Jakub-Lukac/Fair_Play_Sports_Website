@@ -93,14 +93,16 @@ html {
     padding-top: 20px;
 }
 
-.left, .right {
+.left, .right{
     display: flex;
     gap: 4em;
     padding-left: 0px;
 }
 
 .right{
-    padding-left: 70px;
+    display: flex;
+    gap: 3em;
+    padding-left: 0px;
 }
 
 
@@ -175,6 +177,63 @@ html {
     color: var(--ternaryColor);
 }
 
+.camp-section{
+    background: radial-gradient(circle, rgba(245,237,237,1) 0%, rgba(237,222,222,1) 100%);
+    padding-bottom: 10px;
+}
+
+.camp-text{
+    display: block;
+    width: 55%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    color: var(--ternaryColor);
+    font-family: var(--ternaryFont);
+    font-size: 1.2em;
+    word-spacing: 4px;
+}
+
+a.camp-text{
+    text-decoration: none;
+    word-spacing: normal;
+    transition: 500ms;
+    font-size: 1.4em;
+}
+
+a.camp-text:hover{
+    transform: scale(1.2);
+    color: var(--secondaryColor);
+}
+
+.gallery-section{
+    background: radial-gradient(circle, rgba(245,237,237,1) 0%, rgba(215,35,35,1) 100%);
+    padding-bottom: 40px;
+}
+
+.picture-card-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0px 20px;
+}
+
+.picture-card{
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    transition: 700ms;
+    box-shadow: 0 0 0px var(--ternaryColor);
+}
+
+.picture-card:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+    box-shadow: 0 0 15px var(--ternaryColor);
+}
+
 
 footer{
     text-align: center;
@@ -191,25 +250,34 @@ footer{
 
 @media (max-width: 1500px){
     .left{
-        gap: 2em;
+        gap: 4em;
+        padding-right: 0px;
     }
 
     .right{
-        gap: 4em;
+        padding-left: 30px;
+        gap: 2em;
     }
 }
 
 @media (max-width: 1250px){
     .left{
-        gap: 1.5em;
+        gap: 3em;
     }
 
     .right{
-        gap: 3.5em;
+        gap: 1.5em;
+        padding-left: 60px;
     }
 
     .logoImage{
         margin-top: 10px;
+    }
+}
+
+@media (max-width: 1175px){
+    .menu-item {
+        font-size: 1.5em;
     }
 }
 /* Here include burger menu */
@@ -259,8 +327,8 @@ footer{
         text-align: center;
         display: block;
         padding: 0px;
-        margin: 0px 0px 18px 0px;
-        font-size: 1.4em;
+        margin: 0px 0px 10px 0px;
+        font-size: 1.2em;
     }
 
     
@@ -293,6 +361,9 @@ footer{
         font-size: 4em;
     }
 
+    .camp-text{
+        width: 75%;
+    }
 }
 
 @media (max-width: 580px){
@@ -303,7 +374,6 @@ footer{
     .social-media-btns i {
         font-size: 30px;
     }
-
 }
 
 @media (max-width: 500px) {
@@ -312,7 +382,8 @@ footer{
     }
 
     .menu-item{
-        font-size: 1.4em;
+        font-size: 1.1em;
+        padding: 0px 0px 5px 0px;;
     }
 
     .logoImage{
@@ -323,7 +394,12 @@ footer{
     .section-heading{
         font-size: 3.5em;
     }
+
+    .camp-text{
+        font-size: 1.1em;
+    }
 }
+
 
 @media (max-width: 350px){
     footer {
@@ -335,13 +411,19 @@ footer{
     }
 
     .menu-item{
-        font-size: 1.2em;
+        font-size: 1em;
+    }
+
+    .section-heading.white{
+        font-size: 2.5em;
     }
 }
 
-@media (max-width: 250px){
-    .menu-item{
-        font-size: 1em;
+@media (max-width: 265px){
+    .social-media-btns{
+        gap: 30px;
+        right: 50vw;
+        transform: translateX(50%);
     }
 }
 
