@@ -39,6 +39,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html.sr .load-hidden{
+    visibility: hidden;
+}
+
 .hero-image{
     height: 30vh;
     width: 100%;
@@ -195,16 +199,29 @@ html {
 }
 
 a.camp-text{
-    text-decoration: none;
-    word-spacing: normal;
-    transition: 500ms;
+    margin-top: 30px !important;
+    display: block;
+    width: 55%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    color: var(--ternaryColor);
+    font-family: var(--ternaryFont);
     font-size: 1.4em;
+    word-spacing: normal;
+    text-decoration: none;
+    transition: 500ms !important;
 }
 
-a.camp-text:hover{
-    transform: scale(1.2);
+a.camp-text:hover {
+    transform: scale(1.2) !important;
     color: var(--secondaryColor);
 }
+
+/*a.camp-text:hover{
+    transform: scale(1.2);
+    color: var(--secondaryColor);
+}*/
 
 .gallery-section{
     background: radial-gradient(circle, rgba(245,237,237,1) 0%, rgba(215,35,35,1) 100%);

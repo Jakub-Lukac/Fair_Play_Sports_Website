@@ -39,6 +39,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
 .hero-image{
     height: 30vh;
     width: 100%;
@@ -382,13 +386,13 @@ footer{
     font-family: var(--primaryFont);
     color: var(--ternaryColor);
     font-weight: 500;
-    margin: 50px auto 0px auto;
-    transition: 500ms;
+    margin: 50px auto 0px auto !important;
+    transition: 500ms !important;
 }
 
 .full-stats-link:hover{
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.2) !important;
     color: var(--secondaryColor);
 }
 

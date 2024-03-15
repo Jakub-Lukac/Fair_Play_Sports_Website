@@ -39,6 +39,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
 .hero-image{
     height: 30vh;
     width: 100%;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="sr" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -17,6 +17,8 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Club | Fair Play Sports</title>
 
     <style>
@@ -30,11 +32,11 @@
     <header class="hero-image">
         <div class="overlay">
             <nav class="navbar">
-                <ul class="left">
+                <ul class="left load-hidden">
                     <li class="menu-item"><a class="menu-item-text" href="/HomePage.html">Home</a></li>
                     <li class="menu-item"><a class="menu-item-text" href="/pages/Club.html">Club</a></li>
                 </ul>
-                <ul class="right">
+                <ul class="right load-hidden">
                     <li class="menu-item"><a class="menu-item-text" href="./Contact.html">Contact</a></li>
                     <li class="menu-item"><a class="menu-item-text" href="/pages/Sponsorship.html">Sponsorship</a></li>
                     <li class="menu-item"><a class="menu-item-text" href="/pages/Summer_Camps.html">Summer Camps</a>
@@ -44,9 +46,9 @@
                 <i class="fa fa-bars" id="menu-icon"></i>
             </div>
             <div class="logo">
-                <img class="logoImage" src="../images/logo.png" alt="">
+                <img class="logoImage load-hidden" src="../images/logo.png" alt="">
             </div>
-            <section class="social-media-btns">
+            <section class="social-media-btns load-hidden">
                 <a href="https://www.facebook.com/florbalovyklubbanskabystrica/?locale=sk_SK" target="_blank"> <i
                         class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/fps_bb_florbal/" target="_blank"> <i
@@ -58,55 +60,56 @@
     <main>
         <section class="about-us-section">
             <article>
-                <h2 class="section-heading dark-color-text">About us</h2>
-                <p class="about-us-text">Civic association <b>Fair play sports</b> actively ascts since 2011. Our
+                <h2 class="section-heading dark-color-text load-hidden">About us</h2>
+                <p class="about-us-text load-hidden">Civic association <b>Fair play sports</b> actively ascts since
+                    2011. Our
                     goal
                     is the support of healthy
                     lifestyle through regular movement activity – <b>florbal.</b> We organise
                     regular
                     sport events, competitions, training for kids, youth, adults.
                 </p>
-                <p class="about-us-text">
+                <p class="about-us-text load-hidden">
                     Regular activities of the OZ FPS includes mostly floorball trainings for students of primary
                     schools, Highschool
                     floorball league, Floorball for public on recreational level, mostly for
                     adults and <b>National 1st floorball men's league.</b>
                 </p>
-                <p class="about-us-text">
+                <p class="about-us-text load-hidden">
                     You can view our results on our social media profiles, official website <b>szfb </b>and
                     <b>news of</b>
                     regional press <b>town of Basnká Bystrica.</b>
                 </p>
             </article>
             <section class="support-us-links">
-                <a href="https://www.szfb.sk/sk/sport-clubs/detail/80" target="_blank"><img
+                <a href="https://www.szfb.sk/sk/sport-clubs/detail/80" target="_blank"><img class="img load-hidden"
                         src="../images/logo_szfb.png" alt="Logo SZFB"></a>
-                <a href="https://bbonline.sk/" target="_blank"><img src="../images/bbonline.png"
+                <a href="https://bbonline.sk/" target="_blank"><img class="img load-hidden" src="../images/bbonline.png"
                         alt="BB Online Logo"></a>
             </section>
         </section>
         <section class="videos-section">
-            <h2 class="section-heading">Montages of the seasons</h2>
+            <h2 class="section-heading load-hidden">Montages of the seasons</h2>
             <div class="video-cards-section">
-                <div class="video-card" data-content="Montage 2015/2016">
+                <div class="video-card load-hidden" data-content="Montage 2015/2016">
                     <img src="../images/video-images/2015_2016.png" alt="">
                     <div class="playBtn" data-video-url="../videos/video1.mp4">
                         <i class="fa-solid fa-play"></i>
                     </div>
                 </div>
-                <div class="video-card" data-content="Montage 2016/2017">
+                <div class="video-card load-hidden" data-content="Montage 2016/2017">
                     <img src="../images/video-images/2015_2016.png" alt="">
                     <div class="playBtn" data-video-url="../videos/video2.mp4">
                         <i class="fa-solid fa-play"></i>
                     </div>
                 </div>
-                <div class="video-card" data-content="Montage 2017/2018">
+                <div class="video-card load-hidden" data-content="Montage 2017/2018">
                     <img src="../images/video-images/2017_2018.png" alt="">
                     <div class="playBtn" data-video-url="../videos/video3.mp4">
                         <i class="fa-solid fa-play"></i>
                     </div>
                 </div>
-                <div class="video-card" data-content="Montage 2018/2019">
+                <div class="video-card load-hidden" data-content="Montage 2018/2019">
                     <img src="../images/video-images/2017_2018.png" alt="">
                     <div class="playBtn" data-video-url="../videos/video4.mp4">
                         <i class="fa-solid fa-play"></i>
@@ -115,10 +118,11 @@
             </div>
         </section>
         <section class="statistics-section">
-            <h2 id="stats-heading" class="section-heading dark-color-text">Statistics of the 1st Men's League 2023/2024
+            <h2 id="stats-heading load-hidden" class="section-heading dark-color-text">Statistics of the 1st Men's
+                League 2023/2024
             </h2>
             <div class="player-card-container">
-                <div class="player-card">
+                <div class="player-card  load-hidden">
                     <div class="player-img"></div>
                     <div class="player-name-container">
                         <p class="first-name">Samuel</p>
@@ -128,7 +132,7 @@
                         <p>54 Points</p>
                     </div>
                 </div>
-                <div class="player-card">
+                <div class="player-card  load-hidden">
                     <div class="player-img"></div>
                     <div class="player-name-container">
                         <p class="first-name">Jozef</p>
@@ -138,7 +142,7 @@
                         <p>43 Goals</p>
                     </div>
                 </div>
-                <div class="player-card">
+                <div class="player-card  load-hidden">
                     <div class="player-img"></div>
                     <div class="player-name-container">
                         <p class="first-name">Samuel</p>
@@ -149,10 +153,10 @@
                     </div>
                 </div>
             </div>
-            <a href="" class="full-stats-link">View full statistics</a>
+            <a href="" class="full-stats-link load-hidden">View full statistics</a>
         </section>
         <section class=" sponsors-section">
-            <h2 class="section-heading sponsors-heading-color custom-margin-bottom" id="sponzori">SPONSORS</h2>
+            <h2 class="section-heading sponsors-heading-color custom-margin-bottom">SPONSORS</h2>
             <div class="sponsors-card-section">
                 <a href="https://www.florbal4u.com/" target="_blank">
                     <img class="sponsors-image" src="../images/footer-images/florbal4u.png" alt="Florbal4u logo">
@@ -345,8 +349,9 @@
         </section>
     </main>
     <footer>
-        <p>Copyright &copy; 2024 Jakub Lukáč</p>
+        <p class="footer-text load-hidden">Copyright &copy; 2024 Jakub Lukáč</p>
     </footer>
+    <script src="../scripts/scroll-reveal/club.js"></script>
     <script src="../scripts/modalWindows.js"></script>
     <script src="../scripts/script.js"></script>
 </body>

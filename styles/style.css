@@ -38,6 +38,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
 /* HEADER CSS */
 
 .hero-image{
