@@ -14,7 +14,7 @@ inputs.forEach((ipt) => {
 });
 
 function submit() {
-  var sprava =
+  var message =
     document.getElementById("message").value +
     " Odoslal: " +
     document.getElementById("first-name").value +
@@ -24,7 +24,7 @@ function submit() {
     "mailto:jakub.dertus@gmail.com?subject=správa z formulára&cc=" +
       document.getElementById("email").value +
       "&body=" +
-      sprava
+      message
   );
 }
 
