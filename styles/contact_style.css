@@ -595,6 +595,14 @@ textarea.contact-input ~ .icon {
     }
 }
 
+@media (max-width: 400px){
+    .menu-item{
+        font-size: 1em;
+        padding: 0px;
+        margin-bottom: 8px;
+    }
+}
+
 @media (max-width: 350px){
     footer {
         font-size: 1.3em;
@@ -610,10 +618,6 @@ textarea.contact-input ~ .icon {
 
     .navbar.open{
         padding: 50px 10px
-    }
-
-    .menu-item{
-        font-size: 1em;
     }
 }
 @media (max-width: 265px){

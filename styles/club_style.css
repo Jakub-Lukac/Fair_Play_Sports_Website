@@ -736,6 +736,12 @@ tbody tr:hover td {
     .full-stats-link{
         font-size: 1.3em;
     }
+
+    .menu-item{
+        font-size: 1em;
+        padding: 0px;
+        margin-bottom: 8px;
+    }
 }
 
 @media (max-width: 350px){
@@ -751,9 +757,6 @@ tbody tr:hover td {
         padding: 50px 10px
     }
 
-    .menu-item{
-        font-size: 1em;
-    }
 }
 
 @media (max-width: 265px){
