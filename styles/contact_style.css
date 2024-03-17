@@ -601,6 +601,13 @@ textarea.contact-input ~ .icon {
         padding: 0px;
         margin-bottom: 8px;
     }
+
+    .social-media-btns{
+        bottom: 10px;
+    }
+    .social-media-btns i{
+        font-size: 25px;
+    }
 }
 
 @media (max-width: 350px){
