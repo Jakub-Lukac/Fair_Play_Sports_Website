@@ -59,7 +59,7 @@ html.sr .load-hidden {
     height: 100%;
     width: 100%; /* no 100vw, because than we will have horizontall scroll bar, which is smth we do not want*/
     background: linear-gradient(180deg, rgba(0,0,0,.85), rgba(0,0,0,.15));
-    color: white;
+    color: var(--primaryColor);
 }
 
 .menu-item{
@@ -106,9 +106,7 @@ html.sr .load-hidden {
 }
 
 .right{
-    display: flex;
     gap: 3em;
-    padding-left: 0px;
 }
 
 
@@ -173,8 +171,6 @@ html.sr .load-hidden {
 .team-member-detail-card p {
     font-size: 1em;
 }
-
-
 
 /* SPONSORS SECTION */
 
@@ -275,6 +271,7 @@ footer{
 
 .w-100{
     /* this resizes the first name and last name text field to one row, and two columns*/
+    /* element with this class spans over 2 fractions*/
     grid-column: 1 / span 2;
 }
 
@@ -288,6 +285,7 @@ footer{
     width: 100%;
     border: none;
     outline: none;
+    /* calc useful when changing the position of the label */
     padding: 1.5rem 1.35rem calc(0.75rem - 2px) 1.35rem;
     background: var(--input-bg);
     font-family: inherit;
@@ -327,6 +325,7 @@ textarea.contact-input{
 }
 
 textarea.contact-input ~ label {
+    /*general child, only applied to the first one following after textarea*/
     top: 1.2rem;
     transform: none;
 }
@@ -398,6 +397,7 @@ textarea.contact-input ~ .icon {
 
 
 .btn.upload input {
+    /*spans over the whole area of btn.upload but is invisible*/
     position: absolute;
     width: 100%;
     height: 100%;

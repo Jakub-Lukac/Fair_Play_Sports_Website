@@ -57,7 +57,7 @@ html.sr .load-hidden{
     height: 100%;
     width: 100%; /* no 100vw, because than we will have horizontall scroll bar, which is smth we do not want*/
     background: linear-gradient(180deg, rgba(0,0,0,.85), rgba(0,0,0,.15));
-    color: white;
+    color: var(--primaryColor);
 }
 
 .menu-item{
@@ -104,9 +104,7 @@ html.sr .load-hidden{
 }
 
 .right{
-    display: flex;
     gap: 3em;
-    padding-left: 0px;
 }
 
 

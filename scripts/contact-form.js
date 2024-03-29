@@ -13,19 +13,25 @@ inputs.forEach((ipt) => {
   });
 });
 
-function submit() {
+function submitForm() {
   var message =
     document.getElementById("message").value +
-    " Odoslal: " +
+    " Sender: " +
     document.getElementById("first-name").value +
     " " +
-    document.getElementById("last-name");
-  window.open(
-    "mailto:jakub.dertus@gmail.com?subject=správa z formulára&cc=" +
-      document.getElementById("email").value +
-      "&body=" +
-      message
-  );
+    document.getElementById("last-name").value;
+
+  // Construct the mailto link with the message and email
+  var mailtoLink =
+    "mailto:jakub.dertus@gmail.com" +
+    "?subject=sent from online form" +
+    "&cc=" +
+    document.getElementById("email").value +
+    "&body=" +
+    encodeURIComponent(message);
+
+  // Open the mail client with the mailto link
+  window.open(mailtoLink);
 }
 
-document.getElementById("submitBtn").addEventListener("click", submit);
+document.getElementById("submitBtn").addEventListener("click", submitForm);

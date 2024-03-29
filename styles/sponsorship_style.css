@@ -57,7 +57,7 @@ html.sr .load-hidden {
     height: 100%;
     width: 100%; /* no 100vw, because than we will have horizontall scroll bar, which is smth we do not want*/
     background: linear-gradient(180deg, rgba(0,0,0,.85), rgba(0,0,0,.15));
-    color: white;
+    color: var(--primaryColor);
 }
 
 .menu-item{
@@ -66,7 +66,6 @@ html.sr .load-hidden {
     letter-spacing: 0.05em;
     font-weight: 600;
     list-style: none;
-
 }
 
 #menu-icon {
@@ -184,9 +183,9 @@ html.sr .load-hidden {
 .columns{
    display: flex;
    justify-content: center;
-   align-items: start;
+   align-items: start; /*vertically at the top (start)*/
    flex-wrap: wrap;
-   gap: 20px;
+   gap: 60px;
    margin: 0px 40px;
 }
 
@@ -196,6 +195,10 @@ html.sr .load-hidden {
     text-align: center;
     color: var(--ternaryColor);
     font-family: var(--ternaryFont);
+}   
+
+.sponsor-card ul{
+    padding: 0px; /*getting rid of a default value, so text is truly centered*/
 }
 
 ul li {
